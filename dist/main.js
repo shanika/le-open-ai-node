@@ -1,11 +1,8 @@
-function add(a, b) {
-    return a + b;
+function function1() {
+    console.log("function1");
+}
+function function2() {
+    console.log("function2");
 }
 
-function main() {
-    console.log(add(1, 2));
-    console.log("Hello, world!");
-}
-main();
-
-export { main as default };
+export { function1, function2 };

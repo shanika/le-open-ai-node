@@ -1,8 +1,7 @@
-import { add } from "./lib/calc";
-
-export default function main() {
-  console.log(add(1, 2));
-  console.log("Hello, world!");
+export function function1() {
+  console.log("function1");
 }
 
-main();
+export function function2() {
+  console.log("function2");
+}
