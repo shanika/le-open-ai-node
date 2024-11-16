@@ -11,40 +11,6 @@ const config: NodeConfig = {
           type: "string",
           required: true,
         },
-        {
-          name: "prompts",
-          type: "array",
-          required: true,
-          itemsType: {
-            type: "object",
-            name: "prompt",
-            required: true,
-            fields: [
-              {
-                name: "role",
-                type: "string",
-                required: true,
-              },
-              {
-                name: "prompt",
-                type: "string",
-                required: true,
-                isMultiline: true,
-                useTemplate: true,
-              },
-            ],
-          },
-        },
-      ],
-    },
-    {
-      name: "parseOutput",
-      inputs: [
-        {
-          name: "llmOutput",
-          type: "string",
-          required: true,
-        },
       ],
     },
   ],
