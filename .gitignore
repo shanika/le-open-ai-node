@@ -1,1 +1,8 @@
 /node_modules
+
+# Ignore everything in dist
+/dist/*
+
+# But keep these files
+!/dist/main.js
+!/dist/node.config.json

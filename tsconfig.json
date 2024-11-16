@@ -3,10 +3,18 @@
     "target": "es2018",
     "module": "esnext",
     "moduleResolution": "node",
-    "declaration": true,
+    "declaration": false,
+    "sourceMap": false,
     "outDir": "dist",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowJs": true,
+    "types": ["node"],
+    "lib": ["es2018", "dom", "esnext"],
+    "emitDeclarationOnly": false
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "scripts/**/*", "node.config.ts", "src/types"],
+  "ts-node": {
+    "esm": true
+  }
 }
