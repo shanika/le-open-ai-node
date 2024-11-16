@@ -1,20 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es2018",
-    "module": "esnext",
+    "target": "ESNext",
+    "module": "ESNext",
     "moduleResolution": "node",
-    "declaration": false,
-    "sourceMap": false,
-    "outDir": "dist",
-    "strict": true,
     "esModuleInterop": true,
     "allowJs": true,
-    "types": ["node"],
-    "lib": ["es2018", "dom", "esnext"],
-    "emitDeclarationOnly": false
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "dist"
   },
-  "include": ["src/**/*", "scripts/**/*", "node.config.ts", "src/types"],
   "ts-node": {
-    "esm": true
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
   }
 }

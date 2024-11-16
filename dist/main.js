@@ -1,8 +1,12 @@
-function function1() {
-    console.log("function1");
-}
-function function2() {
-    console.log("function2");
+class Node {
+    async invokeModal(input) {
+        console.log(`invokeModal called with:`, { input });
+        return { success: true };
+    }
+    async parseOutput(input) {
+        console.log(`parseOutput called with:`, { input });
+        return { success: true };
+    }
 }
 
-export { function1, function2 };
+export { Node };

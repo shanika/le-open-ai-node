@@ -6,3 +6,7 @@
 # But keep these files
 !/dist/main.js
 !/dist/node.config.json
+
+# Generated files
+/src/generated/*
+!/src/generated/.gitkeep

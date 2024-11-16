@@ -38,8 +38,14 @@ const config: NodeConfig = {
       ],
     },
     {
-      name: "function2",
-      inputs: [],
+      name: "parseOutput",
+      inputs: [
+        {
+          name: "llmOutput",
+          type: "string",
+          required: true,
+        },
+      ],
     },
   ],
 };
