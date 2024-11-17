@@ -25,7 +25,7 @@ __export(main_exports, {
 module.exports = __toCommonJS(main_exports);
 var Node = class {
   async invokeModal(input) {
-    console.log(`invokeModal called with:`, { input });
+    console.log(`invokeModal called with: Test1 `, { input });
     return { success: true };
   }
 };
