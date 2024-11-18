@@ -1,0 +1,15 @@
+{
+  "name": "Your Project Name",
+  "functions": [
+    {
+      "name": "invokeModal",
+      "inputs": [
+        {
+          "name": "modal",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
