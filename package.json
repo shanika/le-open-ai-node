@@ -4,7 +4,7 @@
   "main": "dist/main.js",
   "type": "module",
   "scripts": {
-    "build": "esbuild src/main.ts --bundle --platform=node --target=node20 --outfile=dist/main.js --minify --tree-shaking=true",
+    "build": "esbuild src/main.ts --bundle --platform=node --target=node20 --outfile=dist/main.js --tree-shaking=true",
     "dev": "esbuild src/main.ts --bundle --platform=node --target=node20 --outfile=dist/main.js --watch --tree-shaking=true"
   },
   "devDependencies": {
