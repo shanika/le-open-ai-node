@@ -4028,7 +4028,7 @@ module.exports = __toCommonJS(main_exports);
 var import_moment = __toESM(require_moment(), 1);
 var Node = class {
   async invokeModal(input) {
-    console.log(`invokeModal called with: Test1 `, { input });
+    console.log("invokeModal:", input.modal);
     return {
       success: true,
       timestamp: (0, import_moment.default)().format("YYYY-MM-DD HH:mm:ss")
