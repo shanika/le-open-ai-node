@@ -91,6 +91,40 @@ const config: NodeConfig = {
         },
       ],
     },
+    {
+      name: "contactList",
+      displayName: "Contact List Demo",
+      inputs: [
+        {
+          name: "contacts",
+          type: "array",
+          required: true,
+          itemsType: {
+            name: "contact",
+            type: "object",
+            required: true,
+            fields: [
+              {
+                name: "name",
+                type: "string",
+                required: true,
+              },
+              {
+                name: "age",
+                type: "number",
+                required: true,
+                min: 0,
+              },
+              {
+                name: "isVIP",
+                type: "boolean",
+                required: false,
+              },
+            ],
+          },
+        },
+      ],
+    },
   ],
 };
 
