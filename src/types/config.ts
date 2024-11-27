@@ -48,6 +48,7 @@ export type InputConfig =
 
 export interface FunctionConfig {
   name: string;
+  displayName?: string;
   inputs: InputConfig[];
 }
 
