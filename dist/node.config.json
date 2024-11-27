@@ -65,6 +65,55 @@
           "type": "array",
           "required": false,
           "itemsType": "boolean"
+        },
+        {
+          "name": "role",
+          "displayName": "User Role",
+          "type": "select",
+          "required": true,
+          "options": [
+            {
+              "value": "user",
+              "label": "Regular User"
+            },
+            {
+              "value": "admin",
+              "label": "Administrator"
+            },
+            {
+              "value": "moderator",
+              "label": "Moderator"
+            }
+          ]
+        },
+        {
+          "name": "interests",
+          "displayName": "Areas of Interest",
+          "type": "select",
+          "required": false,
+          "multiple": true,
+          "options": [
+            {
+              "value": "tech",
+              "label": "Technology"
+            },
+            {
+              "value": "sports",
+              "label": "Sports"
+            },
+            {
+              "value": "music",
+              "label": "Music"
+            },
+            {
+              "value": "art",
+              "label": "Art"
+            },
+            {
+              "value": "science",
+              "label": "Science"
+            }
+          ]
         }
       ]
     },
@@ -97,6 +146,26 @@
               "displayName": "Enabled",
               "type": "boolean",
               "required": true
+            },
+            {
+              "name": "theme",
+              "displayName": "UI Theme",
+              "type": "select",
+              "required": true,
+              "options": [
+                {
+                  "value": "light",
+                  "label": "Light Mode"
+                },
+                {
+                  "value": "dark",
+                  "label": "Dark Mode"
+                },
+                {
+                  "value": "system",
+                  "label": "System Default"
+                }
+              ]
             }
           ]
         }
@@ -135,6 +204,30 @@
                 "displayName": "Is VIP",
                 "type": "boolean",
                 "required": false
+              },
+              {
+                "name": "contactType",
+                "displayName": "Contact Type",
+                "type": "select",
+                "required": true,
+                "options": [
+                  {
+                    "value": "family",
+                    "label": "Family Member"
+                  },
+                  {
+                    "value": "friend",
+                    "label": "Friend"
+                  },
+                  {
+                    "value": "colleague",
+                    "label": "Work Colleague"
+                  },
+                  {
+                    "value": "other",
+                    "label": "Other"
+                  }
+                ]
               }
             ]
           }

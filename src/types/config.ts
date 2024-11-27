@@ -4,7 +4,7 @@
 export interface BaseInput {
   name: string;
   displayName?: string;
-  type: "string" | "number" | "array" | "boolean" | "object";
+  type: "string" | "number" | "array" | "boolean" | "object" | "select";
   required: boolean;
 }
 
@@ -27,6 +27,19 @@ export interface BooleanInput extends BaseInput {
   type: "boolean";
 }
 
+// New Select input type for choosing from predefined options
+export interface SelectInput extends BaseInput {
+  type: "select";
+  options: SelectOption[];
+  multiple?: boolean; // Optional: allow multiple selections
+}
+
+// Interface for select options
+export interface SelectOption {
+  value: string;
+  label?: string; // Optional display label, falls back to value if not provided
+}
+
 // Object input for nested configurations
 export interface ObjectInput extends BaseInput {
   type: "object";
@@ -36,7 +49,7 @@ export interface ObjectInput extends BaseInput {
 // Array input that can contain nested InputConfigs or primitive types
 export interface ArrayInput extends BaseInput {
   type: "array";
-  itemsType: "string" | "number" | "boolean" | InputConfig;
+  itemsType: "string" | "number" | "boolean" | "select" | InputConfig;
 }
 
 // Union type for all possible inputs
@@ -45,7 +58,8 @@ export type InputConfig =
   | NumberInput
   | BooleanInput
   | ObjectInput
-  | ArrayInput;
+  | ArrayInput
+  | SelectInput;
 
 export interface FunctionConfig {
   name: string;

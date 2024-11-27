@@ -11,6 +11,8 @@ function generateInputType(input: any): string {
       return "number";
     case "boolean":
       return "boolean";
+    case "select":
+      return input.multiple ? "string[]" : "string";
     case "array":
       console.log("Processing array type with itemsType:", input.itemsType);
       if (typeof input.itemsType === "string") {
