@@ -3,6 +3,7 @@
 // Base interface for all input types
 export interface BaseInput {
   name: string;
+  displayName?: string;
   type: "string" | "number" | "array" | "boolean" | "object";
   required: boolean;
 }
