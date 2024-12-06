@@ -1,12 +1,19 @@
-import { BaseFunctions, InvokeModalInput } from "./generated/inputTypes.js";
-import moment from "moment";
+import OpenAI from "openai";
+import { BaseFunctions, CallModalInput } from "./generated/inputTypes.js";
 
 export class Node implements BaseFunctions {
-  async invokeModal(input: InvokeModalInput): Promise<Record<string, any>> {
-    console.log("invokeModal:", input.modal);
+  async callModal(input: CallModalInput): Promise<Record<string, any>> {
+    const client = new OpenAI({
+      apiKey: input.apiKey,
+    });
+
+    const chatCompletion = await client.chat.completions.create({
+      messages: [{ role: "user", content: "Say this is a test" }],
+      model: "gpt-4o",
+    });
+
     return {
-      success: true,
-      timestamp: moment().format("YYYY-MM-DD HH:mm:ss"),
+      response: chatCompletion.choices[0].message.content,
     };
   }
 }

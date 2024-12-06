@@ -1,233 +1,56 @@
 {
-  "name": "Advanced Demo Project",
+  "name": "OpenAI Chat API Node",
   "functions": [
     {
-      "name": "userProfile",
-      "displayName": "Create User Profile",
+      "name": "callModal",
+      "displayName": "Call Modal",
       "inputs": [
         {
-          "name": "username",
-          "displayName": "Username",
+          "name": "apiKey",
+          "displayName": "Open AI API Key",
           "type": "string",
           "required": true
         },
         {
-          "name": "bio",
-          "displayName": "Biography",
-          "type": "string",
-          "required": false,
-          "isMultiline": true
-        },
-        {
-          "name": "emailTemplate",
-          "displayName": "Email Template",
-          "type": "string",
-          "required": true,
-          "useTemplate": true
-        },
-        {
-          "name": "age",
-          "displayName": "Age",
-          "type": "number",
-          "required": true,
-          "min": 13,
-          "max": 120
-        },
-        {
-          "name": "score",
-          "displayName": "Score",
-          "type": "number",
-          "required": false
-        },
-        {
-          "name": "isActive",
-          "displayName": "Is Active",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "name": "tags",
-          "displayName": "Tags",
-          "type": "array",
-          "required": false,
-          "itemsType": "string"
-        },
-        {
-          "name": "scores",
-          "displayName": "Scores",
-          "type": "array",
-          "required": false,
-          "itemsType": "number"
-        },
-        {
-          "name": "boolFlags",
-          "displayName": "Boolean Flags",
-          "type": "array",
-          "required": false,
-          "itemsType": "boolean"
-        },
-        {
-          "name": "role",
-          "displayName": "User Role",
+          "name": "modal",
+          "displayName": "Modal",
           "type": "select",
           "required": true,
           "options": [
             {
-              "value": "user",
-              "label": "Regular User"
+              "value": "gpt-4o",
+              "label": "GPT-4o"
             },
             {
-              "value": "admin",
-              "label": "Administrator"
+              "value": "gpt-4o-mini",
+              "label": "GPT-4o Mini"
             },
             {
-              "value": "moderator",
-              "label": "Moderator"
+              "value": "gpt-4o-2024-08-06",
+              "label": "GPT-4o 2024-08-06"
             }
           ]
         },
         {
-          "name": "interests",
-          "displayName": "Areas of Interest",
-          "type": "select",
-          "required": false,
-          "multiple": true,
-          "options": [
-            {
-              "value": "tech",
-              "label": "Technology"
-            },
-            {
-              "value": "sports",
-              "label": "Sports"
-            },
-            {
-              "value": "music",
-              "label": "Music"
-            },
-            {
-              "value": "art",
-              "label": "Art"
-            },
-            {
-              "value": "science",
-              "label": "Science"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "simpleObject",
-      "displayName": "Simple Object Demo",
-      "inputs": [
-        {
-          "name": "settings",
-          "displayName": "Settings",
-          "type": "object",
-          "required": true,
-          "fields": [
-            {
-              "name": "title",
-              "displayName": "Title",
-              "type": "string",
-              "required": true
-            },
-            {
-              "name": "count",
-              "displayName": "Count",
-              "type": "number",
-              "required": true,
-              "min": 0,
-              "max": 100
-            },
-            {
-              "name": "enabled",
-              "displayName": "Enabled",
-              "type": "boolean",
-              "required": true
-            },
-            {
-              "name": "theme",
-              "displayName": "UI Theme",
-              "type": "select",
-              "required": true,
-              "options": [
-                {
-                  "value": "light",
-                  "label": "Light Mode"
-                },
-                {
-                  "value": "dark",
-                  "label": "Dark Mode"
-                },
-                {
-                  "value": "system",
-                  "label": "System Default"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "contactList",
-      "displayName": "Contact List Demo",
-      "inputs": [
-        {
-          "name": "contacts",
-          "displayName": "Contacts",
+          "name": "messages",
+          "displayName": "Messages",
           "type": "array",
           "required": true,
           "itemsType": {
-            "name": "contact",
-            "displayName": "Contact",
+            "name": "message",
+            "displayName": "Message",
             "type": "object",
             "required": true,
             "fields": [
               {
-                "name": "name",
-                "displayName": "Name",
+                "name": "role",
                 "type": "string",
                 "required": true
               },
               {
-                "name": "age",
-                "displayName": "Age",
-                "type": "number",
-                "required": true,
-                "min": 0
-              },
-              {
-                "name": "isVIP",
-                "displayName": "Is VIP",
-                "type": "boolean",
-                "required": false
-              },
-              {
-                "name": "contactType",
-                "displayName": "Contact Type",
-                "type": "select",
-                "required": true,
-                "options": [
-                  {
-                    "value": "family",
-                    "label": "Family Member"
-                  },
-                  {
-                    "value": "friend",
-                    "label": "Friend"
-                  },
-                  {
-                    "value": "colleague",
-                    "label": "Work Colleague"
-                  },
-                  {
-                    "value": "other",
-                    "label": "Other"
-                  }
-                ]
+                "name": "content",
+                "type": "string",
+                "required": true
               }
             ]
           }

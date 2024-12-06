@@ -4,20 +4,21 @@
   "main": "dist/main.js",
   "type": "module",
   "scripts": {
-    "generate:types": "tsx scripts/generateTypes.ts",
-    "generate:config": "tsx scripts/generateConfig.ts",
+    "generate:types": "generate-types",
+    "generate:config": "generate-config",
     "prebuild": "npm run generate:types && npm run generate:config",
     "build": "esbuild src/main.ts --bundle --platform=node --target=node20 --outfile=dist/main.js --tree-shaking=true"
   },
   "devDependencies": {
+    "@lang-engine/lang-engine-node": "^1.0.1",
     "@types/node": "^20.17.6",
     "esbuild": "^0.20.1",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.2",
-    "typescript": "^5.3.3",
-    "tsx": "^4.7.1"
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "moment": "^2.30.1"
+    "openai": "^4.76.0"
   }
 }
