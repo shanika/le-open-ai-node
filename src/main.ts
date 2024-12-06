@@ -1,5 +1,9 @@
 import OpenAI from "openai";
 import { BaseFunctions, CallModalInput } from "./generated/inputTypes.js";
+import {
+  ChatCompletionMessageParam,
+  ChatModel,
+} from "openai/resources/index.js";
 
 export class Node implements BaseFunctions {
   async callModal(input: CallModalInput): Promise<Record<string, any>> {
@@ -8,8 +12,8 @@ export class Node implements BaseFunctions {
     });
 
     const chatCompletion = await client.chat.completions.create({
-      messages: [{ role: "user", content: "Say this is a test" }],
-      model: "gpt-4o",
+      messages: input.messages as ChatCompletionMessageParam[],
+      model: input.modal,
     });
 
     return {
