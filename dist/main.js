@@ -15769,8 +15769,8 @@ var Node = class {
       apiKey: input.apiKey
     });
     const chatCompletion = await client.chat.completions.create({
-      messages: [{ role: "user", content: "Say this is a test" }],
-      model: "gpt-4o"
+      messages: input.messages,
+      model: input.modal
     });
     return {
       response: chatCompletion.choices[0].message.content
