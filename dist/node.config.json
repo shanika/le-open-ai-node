@@ -50,7 +50,9 @@
               {
                 "name": "content",
                 "type": "string",
-                "required": true
+                "required": true,
+                "useTemplate": true,
+                "isMultiline": true
               }
             ]
           }

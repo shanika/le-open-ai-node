@@ -36,7 +36,13 @@ const config: NodeConfig = {
             required: true,
             fields: [
               { name: "role", type: "string", required: true },
-              { name: "content", type: "string", required: true },
+              {
+                name: "content",
+                type: "string",
+                required: true,
+                useTemplate: true,
+                isMultiline: true,
+              },
             ],
           },
         },
