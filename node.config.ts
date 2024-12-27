@@ -25,6 +25,14 @@ const config: NodeConfig = {
           ],
         },
         {
+          name: "test_field",
+          displayName: "Test Field",
+          type: "string",
+          required: true,
+          useTemplate: true,
+          isMultiline: true,
+        },
+        {
           name: "messages",
           displayName: "Messages",
           type: "array",
