@@ -10,9 +10,7 @@ const config: NodeConfig = {
         {
           name: "apiKey",
           displayName: "Open AI API Key",
-          type: "string",
-          isMultiline: false,
-          useTemplate: true,
+          type: "secret",
           required: true,
         },
         {

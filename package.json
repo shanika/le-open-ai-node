@@ -10,7 +10,7 @@
     "build": "esbuild src/main.ts --bundle --platform=node --target=node20 --outfile=dist/main.js --tree-shaking=true"
   },
   "devDependencies": {
-    "@lang-engine/lang-engine-node": "^1.0.1",
+    "@lang-engine/lang-engine-node": "^1.0.2",
     "@types/node": "^20.17.6",
     "esbuild": "^0.20.1",
     "ts-node": "^10.9.1",
