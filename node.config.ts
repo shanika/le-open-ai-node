@@ -35,7 +35,16 @@ const config: NodeConfig = {
             type: "object",
             required: true,
             fields: [
-              { name: "role", type: "string", required: true },
+              {
+                name: "role",
+                type: "select",
+                required: true,
+                options: [
+                  { value: "system", label: "System" },
+                  { value: "user", label: "User" },
+                  { value: "assistant", label: "Assistant" },
+                ],
+              },
               {
                 name: "content",
                 type: "string",
