@@ -45,6 +45,7 @@
               {
                 "name": "role",
                 "type": "select",
+                "displayName": "Role",
                 "required": true,
                 "options": [
                   {
@@ -64,6 +65,7 @@
               {
                 "name": "content",
                 "type": "string",
+                "displayName": "Content",
                 "required": true,
                 "useTemplate": true,
                 "isMultiline": true

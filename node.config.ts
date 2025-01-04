@@ -38,6 +38,7 @@ const config: NodeConfig = {
               {
                 name: "role",
                 type: "select",
+                displayName: "Role",
                 required: true,
                 options: [
                   { value: "system", label: "System" },
@@ -48,6 +49,7 @@ const config: NodeConfig = {
               {
                 name: "content",
                 type: "string",
+                displayName: "Content",
                 required: true,
                 useTemplate: true,
                 isMultiline: true,
